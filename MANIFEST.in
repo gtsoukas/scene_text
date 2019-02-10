@@ -1,0 +1,2 @@
+recursive-include scene_text *.h *.hpp *.cpp
+include scene_text/detector/EAST/lanms/Makefile

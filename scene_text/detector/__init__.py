@@ -1,0 +1,1 @@
+from .east import EASTDetector
