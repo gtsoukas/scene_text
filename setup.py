@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="scene-text",
-    version="0.1.0",
+    version="0.1.1",
     author="Georgios Tsoukas",
-    author_email="author@example.com",
+    author_email="georgios@dict.gr",
     description="State of the art scene text detection and recognition made simple",
     long_description=long_description,
     long_description_content_type="text/markdown",
