@@ -52,10 +52,9 @@ class AllWordsRecognizer:
 
         boxes = self.detector.detect(image)
 
-        log.debug("detected {} words".format(len(boxes)))
-
         words = []
         if boxes is not None:
+            log.debug("detected {} words".format(len(boxes)))
             for box in boxes:
                 # avoid submitting errors
                 box = sort_poly(box.astype(np.int32))
