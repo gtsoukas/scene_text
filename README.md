@@ -28,7 +28,7 @@ pipeline = AllWordsRecognizer()
 # read an image
 img = cv2.imread('path/to/my/image/file')[:, :, ::-1]
 
-# detect an recognize all words in the image
+# detect and recognize all words in the image
 words, boxes = pipeline.get_all_words(img)
 ```
 
