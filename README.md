@@ -1,12 +1,12 @@
 # Scene Text Detection and Recognition
 
-State of the art scene text detection and recognition made simple
+Finding text in photos made simple
 
 This project packages scene text algorithms for easy usage. Scenes as in photos are much harder for text detection and recognition than doing the same for printed documents. The latter is mostly referred to as OCR and it is a well solved problem. Note that due to the usage of Deep Learning algorithms, text detection and recognition are rather slow, in particular on CPU-only machines and for images with a large number or words. Accuracies have reached an impressive level but are still below human performance. Currently, the following algorithms are available.
 
 [EAST](https://arxiv.org/abs/1704.03155) is used for detection, where the implementation is mostly copied from [Jan Zdenek](https://github.com/kurapan/EAST ).
 
-[MORAN](https://arxiv.org/abs/1901.03003) used for recognition, where the implementation is mostly copied from [Canjie Luo](https://github.com/Canjie-Luo/MORAN_v2).
+[MORAN](https://arxiv.org/abs/1901.03003) is used for recognition, where the implementation is mostly copied from [Canjie Luo](https://github.com/Canjie-Luo/MORAN_v2).
 
 
 Installation:
