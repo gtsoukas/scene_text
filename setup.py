@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="scene-text",
-    version="0.1.1",
+    version="0.2.0",
     author="Georgios Tsoukas",
     author_email="georgios@dict.gr",
-    description="State of the art scene text detection and recognition made simple",
+    description="Finding text in photos",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/gtsoukas/scene_text",

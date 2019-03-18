@@ -1,4 +1,5 @@
 import argparse
+import glob
 import logging
 from math import atan2, degrees, fabs, sin, radians, cos
 import numpy as np
@@ -84,20 +85,16 @@ def main():
     fontColor = (0,69,255)
     lineType = 1
 
-    def get_images(image_path):
-        '''
-        find image files in test data path
-        :return: list of files found
-        '''
+    def get_image_paths(image_path):
+        types = ('.jpg', '.png', '.jpeg', '.JPG')
+
+        if os.path.isfile(image_path) and image_path.endswith(types):
+            return [image_path]
+
         files = []
-        exts = ['jpg', 'png', 'jpeg', 'JPG']
-        for parent, dirnames, filenames in os.walk(image_path):
-            for filename in filenames:
-                for ext in exts:
-                    if filename.endswith(ext):
-                        files.append(os.path.join(parent, filename))
-                        break
-        logging.info('Found {} images'.format(len(files)))
+        for t in types:
+          files.extend(glob.glob(os.path.join(image_path, '*' + t)))
+
         return files
 
     parser = argparse.ArgumentParser()
@@ -107,7 +104,9 @@ def main():
 
     pipeline = AllWordsRecognizer()
 
-    img_list = get_images(FLAGS.input_image_path)
+    img_list = get_image_paths(FLAGS.input_image_path)
+    logging.info('Found {} images'.format(len(img_list)))
+
     for img_file in img_list:
         img = cv2.imread(img_file)[:, :, ::-1]
         words, boxes=pipeline.get_all_words(img)
