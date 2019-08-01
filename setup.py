@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="scene-text",
-    version="0.2.0",
+    version="0.2.1",
     author="Georgios Tsoukas",
     author_email="georgios@dict.gr",
     description="Finding text in photos",
@@ -24,16 +24,16 @@ setuptools.setup(
     scripts=['bin/scene-text'],
     install_requires=[
           'Colour',
-          'keras',
+          'keras==2.2.4',
           'LMDB',
-          'matplotlib',
+          'matplotlib==3.0.2',
           'opencv-python',
           'Pillow',
           'requests',
           'scipy',
           'shapely',
-          'tensorflow',
+          'tensorflow==1.12.0',
           'torch==0.3.1',
-          'torchvision',
+          'torchvision==0.2.1',
       ],
 )
