@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="scene-text",
-    version="0.2.1",
+    version="0.2.2",
     author="Georgios Tsoukas",
     author_email="georgios@dict.gr",
     description="Finding text in photos",
@@ -32,7 +32,7 @@ setuptools.setup(
           'requests',
           'scipy',
           'shapely',
-          'tensorflow==1.12.0',
+          'tensorflow==1.13.2',
           'torch==0.3.1',
           'torchvision==0.2.1',
       ],
