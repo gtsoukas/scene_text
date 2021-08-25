@@ -32,7 +32,7 @@ setuptools.setup(
           'requests',
           'scipy',
           'shapely',
-          'tensorflow==1.15.2',
+          'tensorflow==2.5.1',
           'torch==0.3.1',
           'torchvision==0.2.1',
       ],
